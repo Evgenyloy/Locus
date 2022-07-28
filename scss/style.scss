@@ -286,8 +286,7 @@ body {
   margin-bottom: 120px;
   &__inner {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 142px;
   }
 
   &__img-cont {
@@ -307,7 +306,7 @@ body {
 
   &__title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
     line-height: 60px;
     color: $black;
     margin-bottom: 50px;
@@ -316,7 +315,7 @@ body {
 
   &__text {
     font-weight: 500;
-    font-size: 30px;
+    font-size: calc(16px + 14 * ((100vw - 320px) / (1280 - 320)));
     line-height: 45px;
     color: $grey;
     max-width: 708px;
@@ -333,14 +332,14 @@ body {
 
   &__title {
     font-weight: 800;
-    font-size: 70px;
+    font-size: calc(34px + 36 * ((100vw - 320px) / (1280 - 320)));
     color: $black;
     margin-bottom: 20px;
   }
 
   &__sub-title {
     font-weight: 400;
-    font-size: 30px;
+    font-size: calc(16px + 14 * ((100vw - 320px) / (1280 - 320)));
     line-height: 45px;
     color: $grey;
     margin-bottom: 51px;
@@ -357,8 +356,8 @@ body {
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 137px;
+
+    gap: 138px;
   }
 
   &__item {
@@ -368,7 +367,7 @@ body {
 
   &__item-title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: calc(24px + 16 * ((100vw - 320px) / (1632 - 320)));
     line-height: 60px;
     margin-bottom: 5px;
     color: $green;
@@ -380,7 +379,7 @@ body {
 
   &__item-text {
     font-weight: 500;
-    font-size: 20px;
+    font-size: calc(14px + 6 * ((100vw - 320px) / (1632 - 320)));
     line-height: 30px;
     margin-bottom: 35px;
     color: #486958;
@@ -412,8 +411,7 @@ body {
 
   &__title {
     font-weight: 800;
-    font-size: 70px;
-    line-height: 105px;
+    font-size: calc(24px + 46 * ((100vw - 320px) / (1280 - 320)));
     color: $black;
     text-align: center;
     margin-bottom: 70px;
@@ -423,6 +421,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   &__img {
@@ -457,18 +456,19 @@ body {
   }
 
   &__description-item {
+    text-align: center;
   }
 
   &__description-num {
     font-weight: 800;
-    font-size: 70px;
+    font-size: calc(24px + 46 * ((100vw - 320px) / (1280 - 320)));
 
     color: #58a9a5;
   }
 
   &__description-text {
     font-weight: 400;
-    font-size: 30px;
+    font-size: calc(16px + 14 * ((100vw - 320px) / (1280 - 320)));
     line-height: 35px;
     color: #58a9a5;
   }
@@ -477,7 +477,7 @@ body {
     max-width: 752px;
     padding-left: 135px;
     font-weight: 500;
-    font-size: 25px;
+    font-size: calc(16px + 9 * ((100vw - 320px) / (1280 - 320)));
     line-height: 38px;
     color: #486958;
     span {
@@ -502,14 +502,14 @@ body {
 
   &__title {
     font-weight: 800;
-    font-size: 70px;
+    font-size: calc(34px + 36 * ((100vw - 320px) / (1280 - 320)));
     margin-bottom: 10px;
     color: $black;
   }
 
   &__sub-title {
     font-weight: 500;
-    font-size: 25px;
+    font-size: calc(16px + 9 * ((100vw - 320px) / (1280 - 320)));
     line-height: 38px;
     color: $grey;
     max-width: 398px;
@@ -538,7 +538,7 @@ body {
   &__name,
   &__mail {
     font-weight: 500;
-    font-size: 25px;
+    font-size: calc(14px + 9 * ((100vw - 320px) / (1280 - 320)));
     color: #486958;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
@@ -547,11 +547,14 @@ body {
   }
 
   &__inner {
+    display: flex;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
   }
 
   &__area {
     font-weight: 500;
-    font-size: 25px;
+    font-size: calc(14px + 9 * ((100vw - 320px) / (1280 - 320)));
     color: #486958;
     border-bottom: 1px solid #000;
     margin-left: 54px;
@@ -572,8 +575,10 @@ body {
     background-color: $green;
     color: #fff;
     border-radius: 15px;
-    margin-left: 809px;
-    bottom: 55px;
+    font-size: calc(14px + 9 * ((100vw - 320px) / (1280 - 320)));
+
+    margin-right: 54px;
+
     transition: all 0.2s linear;
     &:hover {
       background-color: #256864;
@@ -584,16 +589,87 @@ body {
 ::placeholder {
   color: #486958;
 }
+@media (max-width: 1565px) {
+  .form__area {
+    margin-right: 5px;
+  }
+  .form__btn {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1420px) {
+  .contacts__inner {
+    flex-wrap: wrap;
+  }
+  .contacts__inner-wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form {
+    margin: 0 auto;
+  }
+  .form__btn {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 1312px) {
+  .mission__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .mission__img-cont {
+    display: none;
+  }
+  .mission__title {
+    max-width: 708px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .mission__info {
+    padding-right: 0;
+  }
+  .project__wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+  .testimonial__col1 {
+    display: none;
+  }
+}
 
 @media (max-width: 1115px) {
   .menu__item:not(:first-child) {
     margin-left: 40px;
+  }
+  .project__wrapper {
+    gap: 50px;
+  }
+  .testimonial__img-wraper {
+    display: none;
+  }
+  .form {
+    border: none;
+  }
+
+  .form__area {
+    margin-right: 54px;
+    flex-basis: 100%;
+  }
+  .form__btn {
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 975px) {
   .header__logo {
     margin-bottom: 20px;
+  }
+  .project__line {
+    margin-bottom: 50px;
   }
 
   .menu__item:not(:first-child) {
@@ -609,6 +685,15 @@ body {
   }
   .menu {
     margin-bottom: 30px;
+  }
+  .testimonial__quote {
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .testimonial__description {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 20px;
   }
 }
 
@@ -632,6 +717,14 @@ body {
   .presentation__btn-link {
     left: 30px;
     bottom: 100px;
+  }
+
+  .form__name,
+  .form__mail,
+  .Description,
+  .form__area {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -661,8 +754,20 @@ body {
   .header__btn {
     padding: 10px 45px;
   }
+  .mission__text {
+    line-height: 30px;
+  }
+  .testimonial__title {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 480px) {
+  .header {
+    margin-bottom: 50px;
+  }
+  .presentation {
+    margin-bottom: 50px;
+  }
   .menu__item:not(:first-child) {
     margin-left: 15px;
   }
